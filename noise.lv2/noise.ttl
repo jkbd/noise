@@ -1,0 +1,34 @@
+@prefix doap:  <http://usefulinc.com/ns/doap#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix lv2:   <http://lv2plug.in/ns/lv2core#> .
+@prefix ui:    <http://lv2plug.in/ns/extensions/ui#> .
+@prefix epp:   <http://lv2plug.in/ns/ext/port-props#> .
+@prefix atom:  <http://lv2plug.in/ns/ext/atom#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix units: <http://lv2plug.in/ns/extensions/units#> .
+
+<https://github.com/jkbd#me>
+       a foaf:Person ;
+       foaf:name "Jakob Dübel" ;
+       foaf:mbox <20183922+jkbd@users.noreply.github.com> ;
+       foaf:homepage <https://github.com/jkbd> .         
+
+<https://github.com/jkbd/noise>
+       a lv2:Plugin ;
+       a doap:Project ;
+       doap:name "Noise" ;
+       lv2:optionalFeature epp:supportsStrictBounds ;
+       lv2:optionalFeature lv2:hardRTCapable ;
+       doap:maintainer <https://github.com/jkbd#me> ;
+       a doap:Version ;
+       doap:revision "1.0.0" ;
+       doap:license "MIT" ;
+    lv2:port [
+	a lv2:OutputPort ;
+	a lv2:AudioPort ;
+	lv2:index 4 ;
+	lv2:symbol "out0" ;
+	lv2:name "out0" ;
+    ]
+.
