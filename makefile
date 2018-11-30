@@ -12,7 +12,7 @@ $(BUNDLE)/%.so: %.cpp
 	$(CXX) -shared -fPIC -DPIC $(CFLAGS) $< -o $@
 
 %.cpp: %.dsp
-	faust -i -a lv2.cpp -cn scannervibrato $(FAUSTFLAGS) $< -o $@
+	faust -i -a lv2.cpp -cn noise $(FAUSTFLAGS) $< -o $@
 
 install:
 	cp -r $(BUNDLE) $(DESTDIR)$(PREFIX)/lib/lv2/
